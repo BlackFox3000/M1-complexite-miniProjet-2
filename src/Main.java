@@ -20,13 +20,13 @@ public class Main {
         Graph cliqueGraph = graph.converteToClique();
         // 2)grapheResult-> calculeIndépendant(graphe) -> liste de K points
         ArrayList<Integer> kPoints = cliqueGraph.getIndependantSumits();
-//        // 3) comparer entier avec nombrePoint(Liste de K)
-//        if(kPoints.size()<K) {
-//            System.out.println("Error : K < number solutions found");
-//            return;
-//        }
-//        // 4) construire graphe de K
-//        Graph kGraph = new Graph(kPoints);
+        // 3) comparer entier avec nombrePoint(Liste de K)
+        if(kPoints.size()<K) {
+            System.out.println("Error : K < number solutions found");
+            return;
+        }
+        // 4) construire graphe de K
+        Graph kGraph = new Graph(kPoints);
 //        // 5) grapheK -> convertir en fichier CNF
 //        kGraph.convertToFile_CNF();
 
